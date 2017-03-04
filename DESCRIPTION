@@ -9,7 +9,6 @@ Author: Guocai Chen Developer [aut, cre]
 Maintainer: Guocai Chen<guocai.chen@gmail.com>
 Depends: R (>= 3.3.2)
 Description: Esay to use Distributed Computing System for small team.
-    Use four spaces when indenting paragraphs within the Description.
 License: License: GPL-2
 Encoding: UTF-8
 LazyData: true
