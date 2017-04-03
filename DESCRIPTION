@@ -1,18 +1,33 @@
 Package: teamwork
 Type: Package
-Title: Esay to use Distributed Computing System for small team
-Version: 0.1.0
+Title: Easy to Use Distributed Computing System
+Version: 0.2.0
 Date: 2017-01-01
-Authors@R: c(person("Guocai Chen", "Developer", role = c("aut", "cre"),
-                     email = "guocai.chen@gmail.com"))
-Author: Guocai Chen Developer [aut, cre]
+Authors@R: c(person("Guocai Chen", "Developer",
+                    role = c("aut", "cre"),
+                    email = "guocai.chen@gmail.com"),
+             person("Wei Zhang", "Developer",
+                    role = c("aut", "cre"),
+                    email = "vivianzhang317@gmail.com"))
+Author: Guocai Chen Developer [aut, cre], Wei Zhang Developer [aut]
 Maintainer: Guocai Chen<guocai.chen@gmail.com>
-Depends: R (>= 3.3.2)
-Description: Esay to use Distributed Computing System for small team.
+Depends: R (>= 3.3.2),rredis,digest
 License: License: GPL-2
 Encoding: UTF-8
 LazyData: true
-URL: https://www.r-project.org, https://github.com/Teamwork4R/Teamwork4R
+URL: https://github.com/Teamwork4R/Teamwork4R
 BugReports: https://github.com/Teamwork4R/Teamwork4R/issues
-
-
+Description: The R package provides an easy-to-use method for Distributed computing.
+ There are several parallel frameworks can make good use of CPU cores and GPUs of
+ a computer. But we still are stuck with one computer. This package propose an 
+ easy way to run R code on multiple computers in parallel. It’s easy for developers. 
+ The interface is designed use S3 methodology which R developer should be familiar
+ with, no complicate concepts involved. It’s easy to bring in extra computing 
+ resources. To contribute computing resources, all one has to do is to run a 
+ one-line script which can be stopped at any time. In another word, any one/computer
+ can join and contribute at any time easily and freely. All kinds of computers are 
+ welcomed, servers, office computers, personal computers, even Paspberry PI. This 
+ is possible because connections between computers (nodes/clusters) are designed 
+ to be weak. Damages caused by unstable network connections and unpredictable 
+ behaviors of joining computers will be detected and fixed automatically.
+RoxygenNote: 6.0.1
