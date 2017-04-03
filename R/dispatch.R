@@ -1,4 +1,23 @@
+# copyright (c) 2017 Guocai and Wei
+#
+# You can redistribute it and/or modify it under the terms of the
+# GNU General Public License Version 2. You should have received a copy of the
+# GNU General Public License Version 2 along with Teamwork4R project.
+# If not, you can get one at https://github.com/Teamwork4R/Teamwork4R
+#
 
+#' Dispatch job
+#'
+#' Dispatch fucntion call to client.
+#' @param method function to call
+#' @param ... parameters for \code{method}
+#'
+#' @return job id
+#' @export
+#'
+#' @examples tutorial("project") # to print tutorial
+#' @seealso \link[teamwork]{project}
+#'
 dispatch <- function(method, ...) {
   proj <- project.instance(create = TRUE)
   method <- as.character(substitute(method)) # don't transfer function body,
@@ -13,6 +32,18 @@ dispatch <- function(method, ...) {
 }
 
 
+#' Dispatch environment to client.
+#'
+#' Dispatch parameters and fucntions to client, make them available as they are at client side.
+#' @param ... named parameters, functions.
+#' Always use name = value pair, noname value will get lost, cause client script to raise 'could not find function' exception.
+#'
+#' @return invisible \code{TRUE}
+#' @export
+#'
+#' @examples tutorial("project") # to print tutorial
+#' @seealso \link[teamwork]{project}
+#'
 dispatch.env <- function(...) {
   proj <- project.instance(create = TRUE)
   env <- list(arg.list=list(...))
